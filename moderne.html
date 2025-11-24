@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Moderne Technologien</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Moderne Computertechnologien</h1>
+</header>
+
+<nav>
+    <a href="index.html">Startseite</a>
+    <a href="geschichte.html">Geschichte</a>
+    <a href="moderne.html">Moderne Technologien</a>
+    <a href="quellen.html">Quellen</a>
+</nav>
+
+<section>
+    <h2>Moderne Computer im Alltag</h2>
+    <p>
+        Heute spielen Computer eine sehr wichtige Rolle im Alltag. Sie sind nicht mehr nur
+        große Geräte in Büros oder Laboren, sondern Teil unseres täglichen Lebens. Smartphones
+        haben dafür gesorgt, dass wir Computer immer bei uns haben. Seit 2007, mit dem ersten
+        iPhone, haben sich mobile Geräte sehr schnell entwickelt. Heute können Smartphones
+        Fotos und Videos aufnehmen, Spiele ausführen, Navigation ermöglichen und als kleine
+        Büros dienen. Tablets, Laptops und Smartwatches zeigen, wie stark Computertechnik
+        unseren Alltag verändert.
+    </p>
+
+    <h2>Künstliche Intelligenz</h2>
+    <p>
+        Künstliche Intelligenz, kurz KI, wird immer wichtiger. Sie hilft, große Datenmengen
+        zu analysieren, Muster zu erkennen und Entscheidungen zu treffen. KI wird in vielen
+        Bereichen eingesetzt, zum Beispiel in der Medizin, Industrie oder im Verkehr.
+        Sprachassistenten wie Siri oder Alexa nutzen KI. Experten diskutieren, wie man KI
+        sicher und verantwortungsvoll einsetzen kann, damit sie den Menschen unterstützt
+        und nicht ersetzt.
+    </p>
+
+    <h2>Cloud-Computing und Quantencomputer</h2>
+    <p>
+        Cloud-Computing ermöglicht, Daten online zu speichern und von überall darauf zu
+       zugreifen. Das macht Arbeit und Kommunikation flexibler. Quantencomputer sind noch
+        in der Entwicklung, funktionieren anders als normale Computer und könnten in Zukunft
+        sehr komplexe Aufgaben lösen. Sie könnten Wissenschaft, Medizin und Technik stark
+        verändern. Auch wenn sie noch nicht für den Alltag bereit sind, zeigen sie die
+        Zukunft der Computertechnologie.
+    </p>
+</section>
+
+<script>
+    const links = document.querySelectorAll('nav a');
+    const currentPage = window.location.pathname.split("/").pop();
+    links.forEach(link => {
+        if(link.getAttribute('href') === currentPage) {
+            link.classList.add('current');
+        }
+    });
+</script>
+
+</body>
+</html>
