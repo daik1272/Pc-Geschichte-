@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Quellen</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Quellen</h1>
+</header>
+
+<nav>
+    <a href="index.html">Startseite</a>
+    <a href="geschichte.html">Geschichte</a>
+    <a href="moderne.html">Moderne Technologien</a>
+    <a href="quellen.html">Quellen</a>
+</nav>
+
+<section>
+    <h2>Über die verwendeten Quellen</h2>
+    <p>
+        Für diese Website wurden mehrere vertrauenswürdige Quellen genutzt. Die Texte zur
+        frühen Geschichte stammen aus Online-Lexika und wissenschaftlich geprüften Artikeln,
+        zum Beispiel von der Encyclopedia Britannica. Informationen über wichtige
+        Erfinder und Maschinen stammen aus Archiven von IBM und Apple. Moderne Technologien
+        wie Cloud-Computing und künstliche Intelligenz wurden aus aktuellen Fachartikeln
+        und Webseiten entnommen. Alle Texte wurden in eigenen Worten zusammengefasst, um
+        sie leicht verständlich zu machen. Diese Quellen bieten eine gute Übersicht über
+        die Entwicklung der Computer von den ersten Rechenhilfen bis zu modernen
+        Technologien.
+    </p>
+
+    <h2>Liste der Quellen</h2>
+    <ul>
+        <li>Computer History Museum – Offizielle Website</li>
+        <li>IBM Computer History Archive</li>
+        <li>Apple Historische Dokumentation</li>
+        <li>Encyclopedia Britannica – Geschichte der Informatik</li>
+        <li>Wikipedia – Computer und Informatik</li>
+        <li>Google KI Dokumentation – Grundlagen</li>
+        <li>Microsoft Azure – Cloud Grundlagen</li>
+    </ul>
+</section>
+
+<script>
+    const links = document.querySelectorAll('nav a');
+    const currentPage = window.location.pathname.split("/").pop();
+    links.forEach(link => {
+        if(link.getAttribute('href') === currentPage) {
+            link.classList.add('current');
+        }
+    });
+</script>
+
+</body>
+</html>
