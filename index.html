@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Geschichte der Computer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Die Entwicklung der Computertechnologie</h1>
+    <p>Schulprojekt</p>
+</header>
+
+<nav>
+    <a href="index.html">Startseite</a>
+    <a href="geschichte.html">Geschichte</a>
+    <a href="moderne.html">Moderne Technologien</a>
+    <a href="quellen.html">Quellen</a>
+</nav>
+
+<section>
+    <h2>Willkommen!</h2>
+    <p>
+        Auf dieser Website findest du eine übersichtliche Darstellung der Geschichte der Computer,
+        ihrer technischen Entwicklung und ihrer Bedeutung für die moderne Welt. Du kannst durch
+        die Seiten navigieren, um die frühen Rechenhilfen, die Erfindung elektronischer Computer,
+        die PC-Revolution und die modernen Technologien kennenzulernen. Außerdem findest du
+        Informationen zu Quellen und weiterführender Literatur. Die Texte sind einfach und
+        verständlich geschrieben, um das Lernen zu erleichtern. Nutze die Navigation oben, um
+        direkt zu den einzelnen Themen zu springen.
+    </p>
+</section>
+
+<script>
+    const links = document.querySelectorAll('nav a');
+    const currentPage = window.location.pathname.split("/").pop();
+    links.forEach(link => {
+        if(link.getAttribute('href') === currentPage) {
+            link.classList.add('current');
+        }
+    });
+</script>
+
+</body>
+</html>
