@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Geschichte der Computer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Geschichte der Computer</h1>
+</header>
+
+<nav>
+    <a href="index.html">Startseite</a>
+    <a href="geschichte.html">Geschichte</a>
+    <a href="moderne.html">Moderne Technologien</a>
+    <a href="quellen.html">Quellen</a>
+</nav>
+
+<section>
+    <h2>Die Anfänge der Rechenkunst</h2>
+    <p>
+        Die Geschichte der Computer ist eine lange und interessante Entwicklung, die viele
+        Jahrhunderte umfasst. Schon in der Antike brauchten Menschen Werkzeuge, um schneller
+        und sicherer rechnen zu können. Der Abakus war eines der ersten Hilfsmittel. Er
+        besteht aus Stäben und Perlen, die man hin- und herschieben kann. Mit diesem einfachen
+        Gerät konnten Kaufleute und Beamte Aufgaben schneller lösen. Im 17. Jahrhundert
+        entwickelten Erfinder wie Blaise Pascal und Gottfried Wilhelm Leibniz die ersten
+        mechanischen Rechenmaschinen. Die „Pascaline“ konnte addieren und subtrahieren.
+        Diese Geräte waren begrenzt, aber sie zeigten, dass Maschinen beim Rechnen helfen
+        können. Im 19. Jahrhundert entwarf Charles Babbage die „Analytical Engine“. Diese
+        Maschine hatte viele Elemente eines modernen Computers. Ada Lovelace schrieb dafür
+        das erste Programm und gilt als erste Programmiererin.
+    </p>
+
+    <h2>Vom Röhrencomputer zum Mikroprozessor</h2>
+    <p>
+        Der nächste große Schritt erfolgte im 20. Jahrhundert. 1946 wurde der ENIAC gebaut,
+        einer der ersten elektronischen Computer. Er füllte einen ganzen Raum und benötigte
+        tausende Röhren. Trotzdem konnte er schneller rechnen als Menschen. In den 1950er
+        Jahren wurden Vakuumröhren durch Transistoren ersetzt, wodurch Computer kleiner,
+        zuverlässiger und energiesparender wurden. Später kamen integrierte Schaltkreise
+        und Mikroprozessoren, die Computer noch leistungsfähiger und erschwinglicher
+        machten. So konnten immer mehr Menschen Computer benutzen.
+    </p>
+
+    <h2>Die Heimcomputer- und Internetrevolution</h2>
+    <p>
+        In den 1970er und 1980er Jahren erschienen die ersten Heimcomputer wie der Altair
+        8800, der Apple I und der IBM PC. Computer wurden Teil des Alltags in Schulen,
+        Büros und zu Hause. In den 1990er Jahren verbreitete sich das Internet schnell.
+        Es veränderte Kommunikation, Arbeit und Lernen. Heute sind Computer überall:
+        in Autos, Handys, Schulen, Krankenhäusern und vielen anderen Bereichen des Lebens.
+        Sie sind unverzichtbar geworden.
+    </p>
+</section>
+
+<script>
+    const links = document.querySelectorAll('nav a');
+    const currentPage = window.location.pathname.split("/").pop();
+    links.forEach(link => {
+        if(link.getAttribute('href') === currentPage) {
+            link.classList.add('current');
+        }
+    });
+</script>
+
+</body>
+</html>
