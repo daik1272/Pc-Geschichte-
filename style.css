@@ -1,152 +1,151 @@
-/* Reset and Base Styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* Base Styles */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
-  color: #333;
-  background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: linear-gradient(135deg, #e0e0e0 0%, #f4f4f4 100%);
+    min-height: 100vh;
 }
 
 /* Header Section */
 header {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  padding: 60px 20px;
-  text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 header h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 10px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 header p {
-  font-size: 1.2rem;
-  opacity: 0.9;
-  max-width: 600px;
-  margin: 0 auto;
+    margin: 10px 0 0 0;
+    font-size: 1.1rem;
+    opacity: 0.9;
 }
 
-/* Navigation Buttons Section */
-.navigation {
-  max-width: 1200px;
-  margin: 40px auto;
-  padding: 0 20px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
+/* Navigation Bar */
+nav {
+    background: linear-gradient(135deg, #333 0%, #444 100%);
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 15px 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    flex-wrap: wrap;
 }
 
-.theme-button {
-  background: white;
-  border: none;
-  border-radius: 12px;
-  padding: 30px 25px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    position: relative;
 }
 
-.theme-button:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
+nav a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.theme-button h2 {
-  font-size: 1.5rem;
-  color: #667eea;
-  margin-bottom: 15px;
-  transition: color 0.3s ease;
+nav a.current {
+    background: linear-gradient(135deg, #555 0%, #666 100%);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
-.theme-button:hover h2 {
-  color: white;
+nav a.current::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40%;
+    height: 3px;
+    background: white;
+    border-radius: 2px;
 }
 
-.theme-button p {
-  font-size: 1rem;
-  color: #666;
-  line-height: 1.5;
-  transition: color 0.3s ease;
+/* Content Sections */
+section {
+    background: white;
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 1000px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.theme-button:hover p {
-  color: rgba(255, 255, 255, 0.9);
+section:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* Active/Selected State */
-.theme-button.active {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+h2 {
+    color: #222;
+    font-size: 26px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #444;
 }
 
-.theme-button.active h2 {
-  color: white;
-}
-
-.theme-button.active p {
-  color: rgba(255, 255, 255, 0.9);
-}
-
-/* Content Section (optional, for text under buttons) */
-.content {
-  max-width: 1200px;
-  margin: 40px auto;
-  padding: 0 20px;
-}
-
-.content-section {
-  background: white;
-  padding: 40px;
-  border-radius: 12px;
-  margin-bottom: 30px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.content-section h3 {
-  color: #667eea;
-  font-size: 1.8rem;
-  margin-bottom: 15px;
-}
-
-.content-section p {
-  color: #555;
-  font-size: 1.1rem;
-  line-height: 1.8;
+/* Paragraphs and Text */
+section p {
+    color: #555;
+    line-height: 1.8;
+    font-size: 1rem;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  header h1 {
-    font-size: 2rem;
-  }
-  
-  header p {
-    font-size: 1rem;
-  }
-  
-  .navigation {
-    grid-template-columns: 1fr;
-    margin: 30px auto;
-  }
-  
-  .theme-button {
-    padding: 25px 20px;
-  }
-  
-  .theme-button h2 {
-    font-size: 1.3rem;
-  }
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    nav {
+        gap: 15px;
+        padding: 10px;
+    }
+    
+    nav a {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+    
+    section {
+        margin: 20px 15px;
+        padding: 20px;
+    }
+    
+    h2 {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 30px 15px;
+    }
+    
+    header h1 {
+        font-size: 1.5rem;
+    }
+    
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    nav a {
+        width: 100%;
+        text-align: center;
+    }
 }
